@@ -1,0 +1,23 @@
+{
+  "name": "pubzero-ai",
+  "version": "0.1.0",
+  "description": "AI-driven game development tools - Bug Detection Module",
+  "main": "src/bugDetector/index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/",
+    "start": "node src/bugDetector/index.js",
+    "analyze": "node src/bugDetector/index.js"
+  },
+  "dependencies": {
+    "@typescript-eslint/parser": "^6.21.0",
+    "commander": "^11.1.0",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
