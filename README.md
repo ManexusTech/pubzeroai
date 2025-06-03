@@ -169,5 +169,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 If you have any questions or suggestions, feel free to reach out via **GitHub Issues** or the **Discussions** tab.
 
 ---
-
-This **README.md** gives your users and contributors a clear idea of the project, how to get started, and how they can contribute. You can now proceed with creating the initial GitHub repository and start the development. Let me know if you need more details or modifications!
