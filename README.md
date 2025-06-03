@@ -1,5 +1,3 @@
-Great! Here’s the updated **README.md** for the **Pubzero AI** project.
-
 ---
 
 # **Pubzero AI**
@@ -124,12 +122,38 @@ python run_game_design_assistant.py
 
 ### Running the AI Bug Detection
 
-For bug detection, run the AI tool to analyze your game code:
+The bug detector analyzes your game code using static analysis, pattern matching, and AI-powered insights.
 
-```bash
-# Bug detection in code (JavaScript)
-node src/bugFixer/bugDetectorAI.js path/to/your/game/code
-```
+1. Set up OpenAI API key:
+   Create a `.env` file in the project root:
+   ```bash
+   OPENAI_API_KEY=your_openai_api_key_here
+   ```
+
+2. Run the analyzer:
+   ```bash
+   npm run analyze <path-to-file> -- [options]
+   ```
+
+   Options:
+   - `-e, --engine <type>` - Game engine (unity, unreal, godot) [default: unity]
+   - `-l, --language <type>` - Programming language [default: javascript]
+   - `--no-ai` - Disable AI analysis
+
+   Examples:
+   ```bash
+   # Analyze a Unity script
+   npm run analyze path/to/PlayerController.cs -- -e unity -l csharp
+
+   # Analyze JavaScript without AI
+   npm run analyze src/game/player.js -- --no-ai
+   ```
+
+   The tool will analyze and output:
+   - Static Analysis Issues (code style, potential bugs)
+   - Pattern-based Issues (common game dev anti-patterns)
+   - AI-powered Suggestions (if AI is enabled)
+   - Recommended Fixes for each issue
 
 ### NPC Behavior AI
 
@@ -155,7 +179,7 @@ We welcome contributions from the community! To contribute, follow these steps:
 
 * Follow the [coding standards](docs/coding-standards.md).
 * Write tests for new features or bug fixes.
-* Ensure your changes don’t break existing functionality (create unit tests and run integration tests).
+* Ensure your changes don't break existing functionality (create unit tests and run integration tests).
 * For **larger features**, please discuss them first in an issue or pull request.
 
 ---
@@ -170,6 +194,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you have any questions or suggestions, feel free to reach out via **GitHub Issues** or the **Discussions** tab.
 
----
-
-This **README.md** gives your users and contributors a clear idea of the project, how to get started, and how they can contribute. You can now proceed with creating the initial GitHub repository and start the development. Let me know if you need more details or modifications!
